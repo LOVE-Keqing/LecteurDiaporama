@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QLabel>
+#include <QDebug>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class LecteurVue; }
@@ -15,6 +16,10 @@ class LecteurVue : public QMainWindow
 public:
     LecteurVue(QWidget *parent = nullptr);
     ~LecteurVue();
+public slots:
+    void suivant();
+    void precedent();
+    void lancer();
 
 private:
     Ui::LecteurVue *ui;
