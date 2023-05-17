@@ -16,6 +16,16 @@ LecteurVue::LecteurVue(QWidget *parent)
     connect(ui->bPrecedent, SIGNAL(clicked()), this, SLOT(precedent()));
     connect(ui->action_A_propos_de, SIGNAL(triggered()), this, SLOT(information()));
 
+    unLecteur = new Lecteur();
+    unLecteur->changerDiaporama(1);
+    Image* premiereImage = unLecteur->imageCourante();
+    if (premiereImage != nullptr)
+    {
+        QString titre = QString::fromStdString(premiereImage->getTitre());
+        ui->lTitre->setText(titre);
+        QString image = QString::fromStdString(premiereImage->getChemin());
+        ui->lImage->setText(image);
+    }
 }
 
 
@@ -27,20 +37,6 @@ LecteurVue::~LecteurVue()
 void LecteurVue::lancer()
 {
     qDebug() << "lancer";
-    unLecteur = new Lecteur(); // Initialisation de l'instance membre unLecteur
-    qDebug() << "changement de titre";
-    unLecteur->changerDiaporama(1);
-    // Mettre à jour le texte du label avec le titre de la première image du diaporama
-    Image* premiereImage = unLecteur->imageCourante();
-    if (premiereImage != nullptr)
-    {
-        QString titre = QString::fromStdString(premiereImage->getTitre());
-        ui->lTitre->setText(titre);
-        QString image = QString::fromStdString(premiereImage->getChemin());
-        ui->lImage->setText(image);
-    }
-
-    // Maintenant, vous pouvez utiliser unLecteur pour effectuer les opérations souhaitées
 }
 
 void LecteurVue::suivant()
@@ -73,6 +69,6 @@ void LecteurVue::precedent()
 void LecteurVue::information()
 {
     qDebug() << "a";
-    QMessageBox::information(this, "Informations", "V2, 11 mai 2023, Sprocq Fabien,");
+    QMessageBox::information(this, "Informations", "V2, 11 mai 2023, Sprocq Fabien, Martin Edgar, Rodrigues Matteo ");
 }
 
