@@ -143,3 +143,8 @@ $RECYCLE.BIN/
 # End of https://www.toptal.com/developers/gitignore/api/windows,qt,qtcreator,c++
 
 build*/
+v*/build*/
+V*/build*/
+build-*/
+v*/build-*/
+V*/build-*/

@@ -82,8 +82,10 @@ void LecteurVue::suivant()
     {
         QString titre = QString::fromStdString(imageCourante->getTitre());
         ui->lTitre->setText(titre);
-        QString image = QString::fromStdString(imageCourante->getChemin());
-        ui->lImage->setText(image);
+        QString chemin = QString::fromStdString(imageCourante->getChemin());
+        QImage cheminImage (chemin);
+        ui->lImage->setPixmap(QPixmap::fromImage(cheminImage));
+        ui->lImage->show();
     }
 }
 
@@ -96,8 +98,10 @@ void LecteurVue::suivantAuto()
     {
         QString titre = QString::fromStdString(imageCourante->getTitre());
         ui->lTitre->setText(titre);
-        QString image = QString::fromStdString(imageCourante->getChemin());
-        ui->lImage->setText(image);
+        QString chemin = QString::fromStdString(imageCourante->getChemin());
+        QImage cheminImage (chemin);
+        ui->lImage->setPixmap(QPixmap::fromImage(cheminImage));
+        ui->lImage->show();
     }
 }
 
@@ -110,8 +114,10 @@ void LecteurVue::precedent()
     {
         QString titre = QString::fromStdString(imageCourante->getTitre());
         ui->lTitre->setText(titre);
-        QString image = QString::fromStdString(imageCourante->getChemin());
-        ui->lImage->setText(image);
+        QString chemin = QString::fromStdString(imageCourante->getChemin());
+        QImage cheminImage (chemin);
+        ui->lImage->setPixmap(QPixmap::fromImage(cheminImage));
+        ui->lImage->show();
     }
 }
 void LecteurVue::information()
@@ -155,7 +161,9 @@ void LecteurVue::chargerDiapo()
     {
         QString titre = QString::fromStdString(premiereImage->getTitre());
         ui->lTitre->setText(titre);
-        QString image = QString::fromStdString(premiereImage->getChemin());
-        ui->lImage->setText(image);
+        QString chemin = QString::fromStdString(premiereImage->getChemin());
+        QImage cheminImage (chemin);
+        ui->lImage->setPixmap(QPixmap::fromImage(cheminImage));
+        ui->lImage->show();
     }
 }

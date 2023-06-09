@@ -2,7 +2,8 @@
 #define DATABASE_H
 
 #include <QSqlDatabase>
-#define DATASE_NAME"sae201_diaporama"
+
+#define DATABASE_NAME "BD_Diapo"
 #define CONNECT_TYPE "QODBC"
 
 class Database
@@ -13,7 +14,7 @@ public:
     void closeDataBase();
 
 private:
-    QSqlDataBase _mydb;
-};
+    QSqlDatabase mybd;
 
+};
 #endif // DATABASE_H

@@ -37,13 +37,13 @@ void Lecteur::chargerDiaporama()
        Dans une version ultérieure, ces données proviendront d'une base de données,
        et correspondront au diaporama choisi */
     Image* imageACharger;
-    imageACharger = new Image(3, "personne", "Blanche Neige", "C:\\cartesDisney\\carteDisney2.gif");
+    imageACharger = new Image(3, "personne", "Blanche Neige", ":/ImageDiapo/Disney_4.gif");
     _diaporama.push_back(imageACharger);
-    imageACharger = new Image(2, "personne", "Cendrillon", "C:\\cartesDisney\\carteDisney4.gif");
+    imageACharger = new Image(2, "personne", "Cendrillon", ":/ImageDiapo/Disney_45.gif");
     _diaporama.push_back(imageACharger);
-    imageACharger = new Image(4, "animal", "Mickey", "C:\\cartesDisney\\carteDisney1.gif");
+    imageACharger = new Image(4, "animal", "Mickey", ":/ImageDiapo/Disney_19.gif");
     _diaporama.push_back(imageACharger);
-    imageACharger = new Image(1, "personne", "Grincheux", "C:\\cartesDisney\\carteDisney1.gif");
+    imageACharger = new Image(1, "personne", "Dumbo", ":/ImageDiapo/Disney_11.gif");
     _diaporama.push_back(imageACharger);
 
     // trier le contenu du diaporama par ordre croissant selon le rang de l'image dans le diaporama
