@@ -43,7 +43,7 @@ void Lecteur::chargerDiaporama()
     _diaporama.push_back(imageACharger);
     imageACharger = new Image(4, "animal", "Mickey", ":/ImageDiapo/Disney_19.gif");
     _diaporama.push_back(imageACharger);
-    imageACharger = new Image(1, "personne", "Dumbo", ":/ImageDiapo/Disney_11.gif");
+    imageACharger = new Image(1, "animal", "Dumbo", ":/ImageDiapo/Disney_11.gif");
     _diaporama.push_back(imageACharger);
 
     // trier le contenu du diaporama par ordre croissant selon le rang de l'image dans le diaporama
